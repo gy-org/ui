@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ui
+  annotations:
+    github.com/project-slug: gy-org/ui
+    backstage.io/kubernetes-label-selector: 'app=ui'
+  description: ui created
+spec:
+  type: service
+  owner: user:guest
+  lifecycle: experimental
+  # dependsOn:
+  #   - resource:crossplane-eks-demo-05
