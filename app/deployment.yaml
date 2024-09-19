@@ -18,7 +18,6 @@ kind: ConfigMap
 metadata:
   name: ${APP_NAME}
 data:
-  
   ENDPOINTS_CATALOG: http://catalog
   ENDPOINTS_CARTS: http://carts
   ENDPOINTS_CHECKOUT: http://checkout
@@ -56,6 +55,7 @@ kind: Deployment
 metadata:
   name: ${APP_NAME}
   labels:
+    app: ui
     helm.sh/chart: ui-0.0.1
     app.kubernetes.io/name: ui
     app.kubernetes.io/instance: ui
